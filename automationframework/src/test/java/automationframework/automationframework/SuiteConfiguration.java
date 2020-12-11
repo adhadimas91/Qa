@@ -40,7 +40,7 @@ public class SuiteConfiguration {
       } else if (value.startsWith("file:")) {
         capabilities.setCapability(name, new File(".", value.substring(5)).getCanonicalFile().getAbsolutePath());
       } else {
-        capabilities.setCapability(name, value);
+        capabilities.setCapability(name, value); 
       }
     }
 

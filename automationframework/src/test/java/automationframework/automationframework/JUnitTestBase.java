@@ -1,6 +1,7 @@
 package automationframework.automationframework;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,6 +34,8 @@ public class JUnitTestBase {
 
   @BeforeEach
   public void initDriver() throws Throwable {
-    driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities);
+    driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities); 
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 }
