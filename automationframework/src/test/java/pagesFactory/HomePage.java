@@ -1,4 +1,4 @@
-package automationframework.automationframework.pages;
+package pagesFactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,4 +18,9 @@ public class HomePage extends Page {
   public HomePage(WebDriver webDriver) {
     super(webDriver);
   }
+  
+  @FindBy(how = How.LINK_TEXT, using = "Login")
+  @CacheLookup
+  public WebElement LoginButton;
+  
 }

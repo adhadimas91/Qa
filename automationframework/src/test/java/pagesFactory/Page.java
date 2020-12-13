@@ -1,4 +1,4 @@
-package automationframework.automationframework.pages;
+package pagesFactory;
 
 import org.openqa.selenium.WebDriver;
 

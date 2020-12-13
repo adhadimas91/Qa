@@ -1,4 +1,4 @@
-package automationframework.automationframework;
+package framework;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;

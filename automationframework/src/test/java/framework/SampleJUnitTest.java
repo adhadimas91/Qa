@@ -1,4 +1,4 @@
-package automationframework.automationframework;
+package framework;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test; 
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 
 import org.openqa.selenium.support.PageFactory;
 
-import automationframework.automationframework.pages.HomePage;
+import pagesFactory.HomePage;
 
 public class SampleJUnitTest extends JUnitTestBase {
 
@@ -21,5 +21,7 @@ public class SampleJUnitTest extends JUnitTestBase {
   public void testHomePageHasAHeader() {
     driver.get(baseUrl);
     Assertions.assertFalse("".equals(homepage.header.getText()));
+    
+    homepage.LoginButton.click();
   }
 }
