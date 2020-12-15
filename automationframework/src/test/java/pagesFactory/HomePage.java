@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * Sample page
+ * Home page tiket.com
  */
 public class HomePage extends Page {
 
@@ -19,8 +19,18 @@ public class HomePage extends Page {
     super(webDriver);
   }
   
+  /**
+   * Login button 
+   */
   @FindBy(how = How.LINK_TEXT, using = "Login")
   @CacheLookup
   public WebElement LoginButton;
   
+  /**
+   * Tiket Kereta api button on top menu navigation 
+   */
+  @FindBy(how = How.LINK_TEXT, using = "Tiket Kereta Api")
+  @CacheLookup
+  public WebElement MenuKeretaApiButton;
+ 
 }

@@ -14,10 +14,15 @@ public class DemoFeatureStepDef extends BaseClass{
 		this.base = base;
 	}
 
-	private HomePage homepage; 
+	private HomePage homepage;
+	private String email;
+    private String password;
+    
 
-	@Given("Precondition is given")
-	public void precondition_is_given() { 
+	@Given("Precondition is given {string} and {string}")
+	public void precondition_is_given(String email,String password) { 
+		this.email = email;
+		this.password = password;
 		homepage =  PageFactory.initElements(base.driver, HomePage.class);
 		System.out.println("Precondition is given");
 	}
@@ -29,7 +34,8 @@ public class DemoFeatureStepDef extends BaseClass{
 		  Assertions.assertFalse("".equals(homepage.header.getText())); 
 		  homepage.LoginButton.click();
 		 
-		System.out.println("Something is done");
+		System.out.println("Something is email "+email);
+		System.out.println("Something is password "+password);
 	}
 
 	@Then("Something is expected")
