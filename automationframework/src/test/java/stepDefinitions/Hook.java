@@ -36,12 +36,12 @@ public class Hook extends BaseClass {
 		base.driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities);
 		base.driver.manage().window().maximize();
 		base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-		System.out.println("This will run before the Scenario");
+	 
 	}
 
 	@After
 	public void teardown() {
 		base.driver.quit();
-		System.out.println("This will run after the Scenario");
+		 
 	}
 }

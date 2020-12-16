@@ -36,6 +36,6 @@ public class JUnitTestBase {
   public void initDriver() throws Throwable {
     driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities); 
     driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
   }
 }
